@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "748748203466",
+    "project_id": "tracker-makura-rujeet",
+    "storage_bucket": "tracker-makura-rujeet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748748203466:android:bea0dcd24f59c10c245b33",
+        "android_client_info": {
+          "package_name": "com.example.makura_tracer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkS-qbnvYm4NVaZSrd6s_Nq4Eimo1P_iw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748748203466:android:94cc95c3af146244245b33",
+        "android_client_info": {
+          "package_name": "com.example.makura_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkS-qbnvYm4NVaZSrd6s_Nq4Eimo1P_iw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
