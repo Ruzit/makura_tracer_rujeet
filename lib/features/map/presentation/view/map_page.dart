@@ -20,6 +20,8 @@ class _MapPageState extends State<MapPage> {
 
   LatLng? latLng;
 
+  List<LatLng> polyPointList = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +29,12 @@ class _MapPageState extends State<MapPage> {
         title: const Text(
           'Map Page',
         ),
+        backgroundColor: Colors.white.withOpacity(0.8),
         actions: const [
           TrackerStatusWidget(),
         ],
       ),
+      extendBodyBehindAppBar: true,
       body: StreamBuilder<QuerySnapshot>(
           stream: getData(),
           builder: (context, snapshot) {
@@ -47,8 +51,10 @@ class _MapPageState extends State<MapPage> {
             if (doc != null) {
               if (latLng == null) {
                 latLng = LatLng(doc['latitude'], doc['longitude']);
+                polyPointList.add(latLng!);
               } else {
                 latLng = LatLng(doc['latitude'], doc['longitude']);
+                polyPointList.add(latLng!);
                 _mapController.move(latLng!, 17);
               }
             }
@@ -75,6 +81,14 @@ class _MapPageState extends State<MapPage> {
                     TextSourceAttribution(
                       'OpenStreetMap contributors',
                       onTap: null, // (external)
+                    ),
+                  ],
+                ),
+                PolylineLayer(
+                  polylines: [
+                    Polyline(
+                      points: polyPointList,
+                      color: Colors.blue,
                     ),
                   ],
                 ),
