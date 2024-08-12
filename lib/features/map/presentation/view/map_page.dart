@@ -28,16 +28,7 @@ class _MapPageState extends State<MapPage> {
           'Map Page',
         ),
         actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Row(
-              children: <Widget>[
-                Text('Online'),
-                SizedBox(width: 8),
-                TrackerStatusWidget(status: true),
-              ],
-            ),
-          ),
+          TrackerStatusWidget(),
         ],
       ),
       body: StreamBuilder<QuerySnapshot>(
